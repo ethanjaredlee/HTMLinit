@@ -1,6 +1,6 @@
 # vimHTMLinit
 
-To create a new HTML file with an HTML template (defined by template.html), just run 
+To create and open a  new HTML file with an HTML template (defined by template.html), just run 
 
 `html filename.html`
 
@@ -21,3 +21,8 @@ Example: I use zsh, so in my ~/.zshrc, I added:
 4. Reconfigure your shell's rc file.
 
 `. ~/.zshrc`
+
+## Customization Options:
+
+* This script is defaulted to open your new html file in vim, but you can change that by editing the 'EDITOR' variable in main.py
+* You can alias any command you want, doesn't have to be 'html'
