@@ -2,8 +2,17 @@ import subprocess
 import sys, os
 import ipdb
 
-def caller():
+def initHTML():
+    if len(sys.argv) > 2:
+        print 'too many args, exiting ...'
+        sys.exit()
+
     fileName = sys.argv[1]
+
+    if fileName[-5:] != '.html':
+        print 'can only init .html file, exiting ...'
+        sys.exit()
+
     filePath = './{}'.format(fileName)
     exists = os.path.isfile(filePath)
 
@@ -27,4 +36,4 @@ def caller():
         subprocess.call(['vim', fileName])
         f.seek(0)
 
-caller()
+initHTML()
