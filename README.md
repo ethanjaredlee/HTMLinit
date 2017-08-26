@@ -1,6 +1,6 @@
 # vimHTMLinit
 
-To create and open a  new HTML file with an HTML template (defined by template.html), just run 
+To create and open a new HTML file with an HTML template (defined by template.html), just run 
 
 `html filename.html`
 

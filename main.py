@@ -2,7 +2,8 @@ import subprocess
 import sys, os
 from shutil import copyfile
 
-# can replace with editor of choice
+
+# can replace with editor command of choice
 EDITOR = 'vim'
 
 # checks
