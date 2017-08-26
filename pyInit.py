@@ -1,11 +1,18 @@
 import subprocess
+import sys, os
+import ipdb
 
+def caller():
+    fileName = sys.argv[1]
+    filePath = './{}'.format(fileName)
+    exists = os.path.isfile(filePath)
 
-try:
-    open('test.html', 'r')
-except:
-    f = open('test.html', 'w+')
-    initString = '''<!doctype html>
+    if exists:
+        print 'file already exists, exiting ...'
+        sys.exit()
+    else:
+        f = open(fileName, 'w+')
+        initString = '''<!doctype html>
 <html>
 <head>
 </head>
@@ -15,8 +22,9 @@ except:
 
 </html>
 '''
+        f.write(initString)
+        f.flush()
+        subprocess.call(['vim', fileName])
+        f.seek(0)
 
-    f.write(initString)
-
-subprocess.call('pwd')
-
+caller()
